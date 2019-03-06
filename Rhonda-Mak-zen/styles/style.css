@@ -1,0 +1,279 @@
+@charset "UTF-8";
+/* CSS Zen Garden | CM 523 Spring 2019| Rhonda Mak */
+/* ===== HOW TO INCLUDE FANCIER FONT FAMILIES ===== */
+/* 
+If you are using non-standard fonts, embed them into your CSS like this:
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+Then apply them to whichever elements you need to. In this case all body text will be Open Sans (with fallbacks to Helvetica, then Arial, then the default sans-serif).
+
+body {
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+Note: The reason "Open Sans" is in quotes is because it is two words and contains whitespace, whereas Helvetica and Arial are single words and do not need quotes. This is just a syntax rule.
+
+Of course, you can override a rule like this with something specific to the element (p, h1, h2, li, etc.) or by using classes or ids. 
+
+*/
+
+/* ===== HOW TO LINK TO IMAGES ===== */
+/*
+
+If you use images, please put them in the images folder (all lowercase file names and NO SPACES. So 'my-image.jpg' NOT 'My Image.JPG' Got it?!?). Also, realize that your .css file is in the styles folder (not the root folder or the images folder), so to access the images you will need to define a relative path.
+
+EXAMPLE: 
+
+body {
+	background: url(../images/puppy.jpg) no-repeat 50% 10%;
+}
+
+The path between the parentheses means go up one level (because your CSS file, style.css, is in the styles folder), then into the images folder, then find puppy.jpg. You can post this snippet below to see how it renders on the page (note, you will open the html page using Chrome 'open file' in the File menu).
+
+Your file tree looks like this:
+
+css-zen-garden-files (root folder)
+--your-name-index.html
+	-- images
+		-- puppy.jpg
+	-- styles
+		-- style.css
+
+If you follow the example you shouldn't have a problem. Of course, ask me or Biying if you have questions or need help.
+
+ */
+
+/* ===== YOUR CSS GOES BELOW THIS ... HAVE FUN! ===== */
+
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Lato:400,400i|Alegreya+Sans+SC');
+
+html{
+box-sizing: border-box;
+background: #E8D6D4;
+}
+
+
+h1{
+	font-family: Abril Fatface;
+	font-size: 3em;
+	text-align: center;
+	color: #27362F;
+	margin-bottom: 0px;
+}
+
+h2{
+	margin-top: 10px;
+	text-align:center;
+	color: #27362F;
+	font-family: Alegreya Sans SC;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 2.5em;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	font-family: Lato;
+	color: #99749A;
+}
+
+a:hover{
+	color: #C8A9C8;
+}
+
+footer{
+	text-align: center;
+}
+
+h3{
+	font-family: Alegreya Sans SC;
+	font-size: 2em;
+	margin-bottom: 0em;
+	color: #27362F;
+	text-align: left;
+}
+
+p{
+	font-family: Lato;
+	font-size: 1em;
+	text-align: left;
+	line-height: 1.5em;
+	color: #3A3B3B;
+}
+
+ul{
+	/*list-style-image: url("../images/bullet.png");*/
+	list-style-type: none;
+	padding: 0;
+}
+
+footer{
+	display: flex;
+	justify-content: space-around;
+}
+
+footer a{
+	font-size: 1.5em;
+	color: #A38989;
+}
+
+footer a:hover{
+
+	color: #27362F;
+}
+
+@media (max-width: 600px){
+	p{
+		line-height: 1.5em;
+		font-size: 1.25em;
+	}
+	.intro{
+/*		background-image: url("../images/flora.jpg");*/
+		padding-left: 1em;
+		padding-right: 1em;
+		border-bottom: dashed #A38989;
+	}
+
+	#zen-supporting{
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	h3{
+		font-size: 1.75em;
+		margin-bottom: 
+	}
+	footer{
+		border-top: dashed #3A3B3B;
+		padding-top: 0.75em;
+		padding-bottom: 1em;
+	}
+	.sidebar{
+		font-family: Alegreya Sans SC;
+		color: white;
+		padding-left: 1em;
+		padding-right: 1em;
+		padding-top: 0.25em;
+		padding-bottom: 0.25em;
+		background: #3A3B3B;
+	}
+	.sidebar h3{
+		text-align: center;
+		color: white;
+	}
+	ul{
+		text-align: center;
+	}
+
+}
+
+@media (min-width: 601px){
+/*	.page-wrapper{
+		display: flex;
+		flex-direction: row;
+	}*/
+	h1{
+		text-align: left;
+	}
+	h2{
+		text-align: left;
+	}
+	.intro{
+		margin-left: 1.5em;
+		margin-right: 1.5em;
+	}
+
+/*	.page-wrapper div{
+		margin-left: 1.5em;
+		margin-right: 1.5em;
+	}*/
+
+	.preamble h3{
+		text-align: left;
+	}
+
+	#zen-supporting{
+		flex-flow: column;
+		margin-left: 1em;
+		margin-right: 1em;
+	}
+	#zen-supporting div{
+		margin-bottom: 1.5em;
+	}
+
+	footer{
+		border-top: dashed #27362F;
+		padding-top: 1em;
+		margin-bottom: 1.5em;
+	}
+
+	.wrapper{
+		display: flex;
+		flex-flow: row;
+		justify-content: space-around;
+		font-family: Alegreya Sans SC;
+		color: white;
+		padding-left: 1em;
+		padding-right: 1em;
+		padding-top: 0.25em;
+		padding-bottom: 0.25em;
+		background: #3A3B3B;
+	}
+
+	.wrapper div{
+		align-content: stretch;
+		padding-right: 1.5em;
+	}
+
+	#design-archives{
+		order: 3;
+	}
+	.sidebar h3{
+		text-align: left;
+		color: white;
+	}
+
+	p{
+		font-size: 1.5em;
+	}
+
+	.intro, #zen-supporting{
+		margin-left: 3em;
+		margin-right: 3em;
+	}
+}
+
+@media (min-width: 800px){
+
+	.intro, #zen-supporting{
+		margin-left: 4em;
+		margin-right: 4em;
+		max-width: 700px;
+	}
+
+	.wrapper{
+		display: flex;
+		flex-flow: row;
+		justify-content: space-around;
+		font-family: Alegreya Sans SC;
+		color: white;
+		padding-left: 1em;
+		padding-right: 1em;
+		padding-top: 0.25em;
+		padding-bottom: 0.25em;
+		background: #3A3B3B;
+	}
+
+	.sidebar h3{
+		text-align: left;
+		margin-left: 0;
+		color: white;
+	}
+
+}
+
+
